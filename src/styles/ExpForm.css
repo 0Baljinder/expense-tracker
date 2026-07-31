@@ -1,0 +1,74 @@
+.model{
+    display: flex;
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.34);
+    z-index: 1000;
+}
+
+.model form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.374);
+    position: relative;
+}
+
+.model form label{
+    display: flex;
+    flex-direction: column;
+}
+
+.model form label span .optional{
+    color: rgba(0, 0, 0, 0.434);
+}
+
+.model form input,select{
+    height: 37px;
+    width: 270px;
+    border: 2px solid rgba(0, 0, 0, 0.306);
+    padding-left: 10px;
+    font-size: 17px;
+    border-radius: 6px;
+}
+
+.model form input:focus,select:focus,textarea:focus{
+    border: 2px solid rgba(24, 147, 255, 0.306);
+    outline: none;
+}
+
+.model form .close-exp-form{
+    position: absolute;
+    background: none;
+    border: none;
+    right: 10%;
+}
+
+.model form .submit-exp-form{
+    height: 37px;
+    width: 270px;
+    background: rgb(24, 147, 255);
+    border: none;
+    color: white;
+    font-size: 17px;
+    border-radius: 6px;
+}
+
+.model form .submit-exp-form:hover{
+    cursor: pointer;
+    background: rgb(21, 128, 221);
+}
+
+.model form textarea{
+    border: 2px solid rgba(0, 0, 0, 0.306);
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+}

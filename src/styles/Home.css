@@ -1,0 +1,72 @@
+.home{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+}
+
+.home button{
+    border: none;
+    width: 100%;
+    background: rgb(24, 97, 255);
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 5px 0px;
+}
+
+.home .exp-button{
+    box-shadow: 0px 0px 8px gray;
+    transition: transform 0.2s ease-in-out;
+}
+
+.home .exp-button:hover{
+    transform: scale(1.02);
+}
+
+.home button:hover{
+    cursor: pointer;
+}
+
+.home button .add-exp-form{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(250, 252, 253);
+}
+
+.home .exp-list{
+    overflow-y: auto;
+}
+
+.home .button-filter{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.home .not-found{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media (min-width:600px){
+    .home .button-filter{
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .home button{
+        width: 200px;
+    }
+
+    .home{
+        padding: 10px 40px;
+    }
+
+    .home .exp-list{
+        scrollbar-width: none;
+    }
+}

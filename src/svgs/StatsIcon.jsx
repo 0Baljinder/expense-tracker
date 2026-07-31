@@ -1,0 +1,25 @@
+import * as React from "react"
+const StatsIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={34}
+    height={34}
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <g id="SVGRepo_iconCarrier">
+      <defs>
+        <style>
+          {
+            ".a{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px}"
+          }
+        </style>
+      </defs>
+      <path
+        d="M2 20h20M5 20V8.2a.2.2 0 0 1 .2-.2h2.6a.2.2 0 0 1 .2.2V20M11 20V4.267c0-.148.09-.267.2-.267h2.6c.11 0 .2.12.2.267V20M17 20v-8.85c0-.083.09-.15.2-.15h2.6c.11 0 .2.067.2.15V20"
+        className="a"
+      />
+    </g>
+  </svg>
+)
+export default StatsIcon

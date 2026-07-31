@@ -1,0 +1,12 @@
+.selecter{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.selecter label select{
+    width: 100px;
+    height: 27px;
+    font-size: 14px;
+    padding-left: 6px;
+}

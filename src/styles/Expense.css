@@ -1,0 +1,43 @@
+.expense{
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+}
+
+.expense .expense-name-cat{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.expense .amount{
+    color: red;
+    font-weight: 600;
+}
+
+.expense:hover{
+    background: rgba(0, 140, 255, 0.265);
+}
+
+.expense .expense-name-cat .expense-categary{
+    color: rgba(0, 0, 0, 0.587);
+}
+
+.expense .delete-expense{
+    background: none;
+}
+
+
+.expense .edit-expense{
+    background: none;
+}
+
+@media (min-width:600px){
+    .expense{
+        padding: 0px 10px;
+    }
+}
