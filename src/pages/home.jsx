@@ -13,6 +13,7 @@ import UpdateContext from "../context/UpdateContext";
 import Selecter from "../components/Selecter";
 import SetecterContext from "../context/SelecterContext";
 import getYears from "../services/getYears";
+import Loadingcontext from "../context/LoadingContext";
 
 function Home(){
     const {sort, month, year,selectedYear ,setSort, setMonth, setYear, setSelectedYear} = useContext(SetecterContext);
@@ -20,6 +21,7 @@ function Home(){
     const {expArray, setExpArray, ExpArrayHadler} = useContext(ExpArrayContext);
     const {getExp, setGetExp} = useContext(GetExpMessageContext);
     const {update, objId, setUpdate, setObjId} = useContext(UpdateContext);
+    const {loading, setLoading} = useContext(Loadingcontext);
 
     useEffect(()=>{
         const fetchYears = async()=>{
@@ -31,7 +33,7 @@ function Home(){
     useEffect(()=>{
         if(!selectedYear)return;
         const fetchExpenses = async ()=>{
-            getExpenses(setGetExp,setExpArray, expArray,sort, month, selectedYear);
+            getExpenses(setGetExp,setExpArray, expArray,sort, month, selectedYear, setLoading);
         };
         fetchExpenses();
     },[sort,month,selectedYear]);

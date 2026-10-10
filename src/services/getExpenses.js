@@ -1,6 +1,7 @@
 
-async function getExpenses(setGetExp,setExpArray,expArray, sort, month, selectedYear){
+async function getExpenses(setGetExp,setExpArray,expArray, sort, month, selectedYear, setLoading){
     try{
+        setLoading(true);
         const response = await fetch(`http://localhost:5000/expenses?month=${month}&year=${selectedYear}&sort=${sort}`);
         if(!response.ok){
             console.log("Failed to fetch data");
@@ -16,6 +17,9 @@ async function getExpenses(setGetExp,setExpArray,expArray, sort, month, selected
     }
     catch(er){
         console.log(er.message);
+    }
+    finally{
+        setLoading(false);
     }
 }
 

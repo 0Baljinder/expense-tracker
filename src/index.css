@@ -3,3 +3,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+main{
+    position: relative;
+}
+
+main .loading-state{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+@keyframes rotation{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+main .loading-icon{
+    animation: rotation 1s linear infinite;
+}

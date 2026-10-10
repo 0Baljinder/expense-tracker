@@ -10,6 +10,7 @@ import { GetExpMessageProvider } from './context/GetExpMessage.jsx'
 import { UpdateContextProvider } from './context/UpdateContext.jsx'
 import { YearProvider } from './context/YearsContext.jsx'
 import { SelecterProvider } from './context/SelecterContext.jsx'
+import { LoadingcontextProvider } from './context/LoadingContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -20,7 +21,9 @@ createRoot(document.getElementById('root')).render(
   <GetExpMessageProvider>
   <UpdateContextProvider>
   <SelecterProvider>
+  <LoadingcontextProvider>
     <App />
+  </LoadingcontextProvider>
   </SelecterProvider>
   </UpdateContextProvider>
   </GetExpMessageProvider>
